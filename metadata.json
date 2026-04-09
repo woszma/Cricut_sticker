@@ -1,0 +1,5 @@
+{
+  "name": "Vibe Sticker Maker",
+  "description": "An online tool to extract graphics from scanned images and add a smooth white offset border, perfect for Cricut stickers.",
+  "requestFramePermissions": []
+}
