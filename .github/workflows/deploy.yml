@@ -2,14 +2,13 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [ main ] # 如果你的預設分支是 master，請改成 master
+    branches: [ main ]
 
 permissions:
   contents: read
   pages: write
   id-token: write
 
-# 加入這個環境變數，強制所有 Actions 使用 Node.js 24 來消除警告
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
@@ -20,7 +19,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: 24 # 將這裡從 20 改為 24
+          node-version: 24
       - run: npm install
       - run: npm run build
       - uses: actions/upload-pages-artifact@v3
